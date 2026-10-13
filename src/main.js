@@ -11,6 +11,7 @@ function joinTest(arr, separator = ',') {
   return str;
 }
 
+
 console.log(joinTest(["1", "2", "3"], ", ")); // "1, 2, 3"
 console.log(joinTest([1, 2, 3]));              // "1,2,3"
 console.log(joinTest([1, 2, 3], ""));          // "123"
