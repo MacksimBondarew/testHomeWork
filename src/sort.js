@@ -13,7 +13,6 @@ function sort(arr, compare) {
     for (let j = 0; j < copy.length; j++) {
       let a = copy[j];
       let b = copy[j + 1];
-      console.log(copy);
       if (compare(a, b) > 0) {
         copy[j] = b;
         copy[j + 1] = a;
