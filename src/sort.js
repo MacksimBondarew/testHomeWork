@@ -2,8 +2,8 @@ function sort(arr, compare) {
   let copy = [...arr];
   if (!compare) {
     compare = (a, b) => {
-      const strA = String(a);
-      const strB = String(b);
+      const strA = a;
+      const strB = b;
       if (strA < strB) return -1;
       if (strA > strB) return 1;
       return 0;
@@ -23,5 +23,5 @@ function sort(arr, compare) {
 }
 
 const nums = [10, 1, 5, 100, 2];
-// console.log(sort(nums, (a, b) => a - b));
-sort(nums, (a, b) => b - a);
+console.log(sort(nums, (a, b) => a - b));
+console.log(sort(nums, (a, b) => b - a))
