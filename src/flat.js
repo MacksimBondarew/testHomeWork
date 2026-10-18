@@ -1,24 +1,22 @@
 function myFlat(arr, depth = 1) {
   let copy = [...arr];
-
-  for (let d = 0; d < depth; d++) {
+  for (let i = 0; i < depth; i++) {
     let next = [];
-    let hasArray = false;
-
-    for (let i = 0; i < copy.length; i++) {
-      if (Array.isArray(copy[i])) {
-        next = [...next, ...copy[i]];
-        hasArray = true;
+    let checkArray = false;
+    for (let j = 0; j < copy.length; j++) {
+      if (Array.isArray(copy[j])) {
+        next = [...next, ...copy[j]];
+        checkArray = true;
       } else {
-        next = [...next, copy[i]];
+        next = [...next, copy[j]]
       }
     }
-
     copy = next;
 
-    if (!hasArray) break;
+    if (!checkArray) {
+      break;
+    }
   }
-
   return copy;
 }
 
