@@ -23,5 +23,3 @@ function sort(arr, compare) {
 }
 
 const nums = [10, 1, 5, 100, 2];
-console.log(sort(nums, (a, b) => a - b));
-console.log(sort(nums, (a, b) => b - a))

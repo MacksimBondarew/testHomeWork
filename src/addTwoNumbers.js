@@ -13,5 +13,5 @@ var addTwoNumbers = function (l1, l2) {
   }
   return result;
 };
-console.log(new Date(2026, 9, 25, 18, 30, 0))
+
 console.log(addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]));
