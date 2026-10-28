@@ -69,6 +69,8 @@ function cloneNestedData(data) {
       } else {
         target[targetKey] = value;
       }
+      console.log(copyData);
+
     }
   }
   return copy;
