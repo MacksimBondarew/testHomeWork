@@ -11,6 +11,7 @@ function selectionSort(arr, compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0)) {
 
     if (minIndex !== i) {
       [a[i], a[minIndex]] = [a[minIndex], a[i]];
+      console.log(a)
     }
   }
   return a;
