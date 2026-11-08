@@ -60,6 +60,7 @@ function findFirstFrom(events, fromDate) {
   return ans;
 }
 
+
 const events = [
   { title: 'Kolokwium JS', date: '2026-10-05T08:00:00+00:00' },
   { title: 'Egzamin staż', date: '2026-10-19T14:30:00+00:00' },
