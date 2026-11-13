@@ -1,19 +1,20 @@
-// function findNearestCityIndex(distances, x) {
-//   let left = 0;
-//   let right = distances.length - 1;
-//   while (left <= right) {
-//     let mid = Math.floor((left + right) / 2);
-//     if (distances[mid] === x) return mid;
-//     if (distances[mid] < x) left = mid + 1;
-//     else right = mid - 1;
-//   }
-//   console.log(right, left)
-//   return (distances[right] - x) < (distances[left] - x) ? right : left
-// }
+function findNearestCityIndex(distances, x) {
+  let left = 0;
+  let right = distances.length - 1;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (distances[mid] === x) return mid;
+    if (distances[mid] < x) left = mid + 1;
+    else right = mid - 1;
+  }
+  console.log(right, left)
+  return (distances[right] - x) < (distances[left] - x) ? right : left
+}
 
 // function findNearestCityIndex(distances, x) {
 //   let index = 0;
 //   for (let i = 1; i < distances.length; i++) {
+//     console.log(distances[i] - x, distances[index] - x);
 //     if (Math.abs(distances[i] - x) < Math.abs(distances[index] - x)) {
 //       index = i;
 //     }
@@ -22,11 +23,10 @@
 // }
 
 // // Пример использования:
-// const distances = [10, 20, 30, 40, 50, 60, 70];
-// const x = 30;
-//
-// console.log(findNearestCityIndex(distances, 35));
-// const nearestIndex = findNearestCityIndex(distances, x);
+const distances = [10, 20, 30, 40, 50, 60, 70];
+const x = 35;
+
+const nearestIndex = findNearestCityIndex(distances, x);
 //
 // console.log('Индекс ближайшего города:', nearestIndex); //
 
@@ -66,10 +66,10 @@
 //];
 
 const ads = [
-  { name: 'ad1', price: 1.8, show: 0 },
-  { name: 'ad2', price: 1.55, show: 0 },
-  { name: 'ad3', price: 1.13, show: 0 },
-  { name: 'ad4', price: 0.48, show: 0 },
+  { name: 'ad1', price: 1, show: 0 },
+  { name: 'ad2', price: 2, show: 0 },
+  { name: 'ad3', price: 3, show: 0 },
+  { name: 'ad4', price: 4, show: 0 },
 ];
 
 function spreadTrafficByPrice(banners) {
@@ -83,11 +83,11 @@ function spreadTrafficByPrice(banners) {
     return server.show++;
 }
 
-for (let i = 0; i < 1000000; i++) {
-  spreadTrafficByPrice(ads);
-}
-
-console.log(ads);
+// for (let i = 0; i < 1000000; i++) {
+//   spreadTrafficByPrice(ads);
+// }
+//
+// console.log(ads);
 
 // Чем выше цена тем больше трафика получит баннер
 //
